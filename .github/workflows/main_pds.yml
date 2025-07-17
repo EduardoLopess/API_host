@@ -46,7 +46,8 @@ jobs:
           name: dotnet-app
 
       - name: List files in dotnet-app folder
-        run: ls -la ./dotnet-app
+        shell: pwsh
+        run: Get-ChildItem -Force ./dotnet-app
 
       - name: Login to Azure
         uses: azure/login@v2
